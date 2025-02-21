@@ -8,4 +8,4 @@
 
 ## Exemplo de modelagem Lógica
 
-![Tabela, colunas e relacionamento](modelagem-conceitual/modelo-logico.png)
+![Tabela, colunas e relacionamento](modelagem-logico/modelo-logico.png)
