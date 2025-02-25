@@ -81,7 +81,7 @@ VALUES(
 
 ```sql
 INSERT INTO fabricantes (nome) VALUES('Positivo');
-INSERT INTO fabricantes (nome) VALUES('Microsof');
+INSERT INTO fabricantes (nome) VALUES('Microsoft');
 
 ```
 
