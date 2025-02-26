@@ -142,3 +142,52 @@ WHERE fabricante_id = 3 OR fabricante_id = 5;
 SELECT nome, descricao FROM produtos
 WHERE fabricante_id IN(3, 5);
 ```
+
+#### NÃO (NOT)
+
+```sql
+-- Nome, descrição e preço de todos os produtos EXCETO da POSTIVO
+SELECT nome, descricao, preco FROM produtos
+WHERE NOT fabricante_id = 7;
+
+-- Versão usando operador relacional de "diferente/diferença" 
+SELECT nome, descricao, preco FROM produtos
+WHERE NOT fabricante_id != 7;
+```
+
+---
+
+## UPDATE (Fabricantes)
+
+**PERIGO !**
+
+**SEMPRE USE** A cláusula `WHERE` em seu comando `UPDATE` especificando uma ou mais condições para a atualização.
+
+```sql
+-- Trocando o nome do fabricante 
+UPDATE fabricantes SET nome = 'Asus do Brasil';
+WHERE id = 1;
+
+-- Alterar a quantidade para 10 dos queustam abaixo de 2000 exceto da Microsoft.
+
+UPDATE produtos SET quantidade = 10
+WHERE preco < 2000 AND fabricante_id != 8;
+```
+
+---
+
+## UPDATE (Fabricantes)
+
+**PERIGO !**
+
+**SEMPRE USE** A cláusula `WHERE` em seu comando `UPDATE` especificando uma ou mais condições para a atualização.
+
+
+```sql
+DELETE FROM fabricantes WHERE id = 4;
+DELETE FROM fabricantes WHERE id = 1;
+
+DELETE FROM produtos WHERE id = 4;
+
+-- DELETE FROM fabricantes WHERE id = 3;
+```
