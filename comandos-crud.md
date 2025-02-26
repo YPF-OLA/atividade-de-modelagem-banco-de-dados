@@ -102,3 +102,24 @@ VALUES(
     7    
 );
 ```
+
+## SELECT (Produtos)
+
+```sql
+-- Lendo TODAS as colunas de TODOS os registros
+SELECT * FROM produtos;
+
+-- Lendo somente nome e preço de todos registros
+SELECT nome, preco FROM produtos;
+SELECT nome, preco FROM produtos;
+
+-- Mostrando nome, preço e quantidade SOMENTE dos produtos que custam abaixo de 5000
+SELECT nome, preco, quantidade FROM produtos
+WHERE preco < 5000;
+
+-- Mini-exercício: mostra o nome e descrição somente dos produtos da Apple
+SELECT nome, descricao FROM produtos
+WHERE fabricante_id = 3;
+
+
+```
