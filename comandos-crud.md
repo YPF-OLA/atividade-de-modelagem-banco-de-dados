@@ -120,6 +120,13 @@ WHERE preco < 5000;
 -- Mini-exercício: mostra o nome e descrição somente dos produtos da Apple
 SELECT nome, descricao FROM produtos
 WHERE fabricante_id = 3;
+```
 
+### Operador Lógicos: E, OU e NÃO
 
+#### E (AND)
+
+```sql
+SELECT nome, preco FROM produtos
+WHERE preco >= 2000 AND preco <= 6000;
 ```
