@@ -278,3 +278,32 @@ ON produtos.fabricante_id = fabricantes.id
 GROUP BY Fabricante
 ORDER BY Total;  
 ```  
+
+```sql
+-- Mostrar Filmes e o Detalhe/Sinopse do Filme
+SELECT
+    filmes.titulo AS "Título do Filme",
+    generos.nome AS "Gênero do Filme"
+FROM filmes
+
+                                -- tabela.FK  = OUTRA
+INNER JOIN generos ON filmes.genero_id = generos.id
+INNER JOIN generos ON filmes.genero_id = generos.id;
+
+-- Mostrar Filme e o Detalhe/Sinopse do Filme
+SELECT
+    filmes.titulo AS "Título do Filme",
+    detalhes.sinopse AS "Resumo do filme"
+FROM filmes
+INNER JOIN detalhes ON filmes.id = detalhes.filme_id;    
+
+-- Mostrar Filme, o Gênero e o Detalhes/Sinopse do Filme
+
+SELECT
+    filmes.titulo AS Filme,
+    generos.nome AS Genero,
+    detalhes.sinopse AS Resumo,
+FROM filmes
+INNER JOIN generos ON filmes.genero_id = generos.id
+INNER JOIN detalhes ON filmes.id = detalhes.filme_id;  
+```
